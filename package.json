@@ -42,6 +42,9 @@
       "^.+\\.ts$": "ts-jest"
     }
   },
+  "peerDependencies": {
+    "virgil-pythia": "^0.2.1"
+  },
   "devDependencies": {
     "@types/jest": "^23.3.1",
     "@types/node": "^10.7.0",
@@ -58,6 +61,9 @@
     "tslint-config-airbnb": "^5.9.2",
     "tslint-config-prettier": "^1.14.0",
     "tslint-plugin-prettier": "^1.3.0",
-    "typescript": "^3.0.1"
+    "typescript": "^3.0.1",
+    "virgil-crypto": "^3.0.0",
+    "virgil-pythia": "^0.2.1",
+    "virgil-sdk": "^5.0.0"
   }
 }
