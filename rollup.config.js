@@ -16,6 +16,10 @@ if (!formats[format]) {
 
 module.exports = {
   input: path.join(__dirname, "src", "index.ts"),
+  external: Array.prototype.concat(
+    Object.keys(packageJson.dependencies),
+    Object.keys(packageJson.peerDependencies),
+  ),
   output: {
     format,
     file: `${packageJson.name}.${format}.js`,
