@@ -1,6 +1,6 @@
 {
   "name": "@virgilsecurity/passport-pythia",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "Passport strategy for authenticating with Virgil Pythia",
   "main": "./dist/passport-pythia.cjs.js",
   "module": "./dist/passport-pythia.es.js",
