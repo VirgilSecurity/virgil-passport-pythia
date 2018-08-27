@@ -1,11 +1,14 @@
 {
-  "name": "passport-pythia",
+  "name": "@virgilsecurity/passport-pythia",
   "version": "1.0.0",
   "description": "Passport strategy for authenticating with Virgil Pythia",
   "main": "./dist/passport-pythia.cjs.js",
   "module": "./dist/passport-pythia.es.js",
   "typings": "./dist/types/index.d.ts",
-  "repository": "https://VirgilSecurity/passport-pythia.git",
+  "files": [
+    "dist"
+  ],
+  "repository": "https://github.com/VirgilSecurity/passport-pythia",
   "author": "Virgil Security Inc. <support@virgilsecurity.com>",
   "license": "BSD-3-Clause",
   "scripts": {
@@ -14,7 +17,7 @@
     "build:cjs": "cross-env FORMAT=cjs rollup -c",
     "build:es": "cross-env FORMAT=es rollup -c",
     "build": "npm run build:cjs && npm run build:es",
-    "prepare": "npm run clean && npm run build",
+    "prepublishOnly": "npm run clean && npm run build",
     "lint": "tslint --project tsconfig.json",
     "prettier": "prettier 'src/**/*.ts' --write",
     "precommit": "lint-staged"

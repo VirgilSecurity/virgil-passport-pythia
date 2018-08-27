@@ -3,6 +3,8 @@ const typescript = require('rollup-plugin-typescript2');
 
 const packageJson = require('./package.json');
 
+const NAME = 'passport-pythia';
+
 const format = process.env.FORMAT;
 
 const formats = {
@@ -22,7 +24,7 @@ module.exports = {
   ),
   output: {
     format,
-    file: `${packageJson.name}.${format}.js`,
+    file: `${NAME}.${format}.js`,
     dir: path.join(__dirname, "dist")
   },
   plugins: [
