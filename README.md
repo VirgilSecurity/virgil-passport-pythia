@@ -40,13 +40,13 @@ passport.use(new PythiaStrategy(
         User.findOne({ username: request.body.username }, (err, user) => {
             if (err) return cb(err);
             if (!user) return cb(new Error('Invalid username'));
-            return {
+            cb(null, {
                 user,
                 password: request.body.password,
                 salt: user.bppSalt,
                 deblindedPassword: user.bppDeblindedPassword,
                 version: user.bppVersion
-            };
+            });
         });
     }
 ));
