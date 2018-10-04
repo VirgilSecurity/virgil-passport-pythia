@@ -12,7 +12,7 @@ const {
 const { JwtGenerator, GeneratorJwtProvider } = require('virgil-sdk');
 const { createPythia } = require('virgil-pythia');
 
-const PythiaStrategy = require('../../dist/passport-pythia.cjs');
+const PythiaStrategy = require('@virgilsecurity/passport-pythia');
 
 dotenv.config();
 
