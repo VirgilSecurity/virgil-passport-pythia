@@ -17,7 +17,7 @@
     "build:cjs": "cross-env FORMAT=cjs rollup -c",
     "build:es": "cross-env FORMAT=es rollup -c",
     "build": "npm run build:cjs && npm run build:es",
-    "prepublishOnly": "npm run clean && npm run build",
+    "prepare": "npm run clean && npm run build",
     "lint": "tslint --project tsconfig.json",
     "prettier": "prettier 'src/**/*.ts' --write",
     "precommit": "lint-staged"
