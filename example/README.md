@@ -23,6 +23,7 @@ Next, `cd` into the `example` folder and install dependencies there.
 ```sh
 cd example
 npm install
+npm install @virgilsecurity/passport-pythia
 ```
 
 Create a new file named `.env` with the contents of `.env.example`
