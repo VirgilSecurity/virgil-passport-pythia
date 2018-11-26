@@ -2,7 +2,7 @@
 
 [Passport](http://www.passportjs.org/) strategy for authenticating with the Virgil [Pythia PRF](https://eprint.iacr.org/2015/644.pdf) service.
 
-This module lets you aithenticate using a username and password while protecting the passwords cryptographically using the Pythia PRF service. We'll refer to passwords protected with the Pythia PRF service as [Breach-Proof Password](https://developer.virgilsecurity.com/docs/go/use-cases/v1/breach-proof-password).
+This module lets you authenticate using a username and password while protecting the passwords cryptographically using the Pythia PRF service. We'll refer to passwords protected with the Pythia PRF service as [Breach-Proof Password](https://developer.virgilsecurity.com/docs/go/use-cases/v1/breach-proof-password).
 
 By plugging into Passport, Breach-Proof Password support can be easily and unobtrusively
 integrated into any application or framework that supports
@@ -35,7 +35,7 @@ The strategy requires two parameters. The first is an instance of `Pythia` class
 
 ```javascript
 passport.use(new PythiaStrategy(
-    virgilPythia, 
+    virgilPythia,
     (request, cb) => {
         User.findOne({ username: request.body.username }, (err, user) => {
             if (err) return cb(err);
