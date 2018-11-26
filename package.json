@@ -19,8 +19,7 @@
     "build": "npm run build:cjs && npm run build:es",
     "prepare": "npm run clean && npm run build",
     "lint": "tslint --project tsconfig.json",
-    "prettier": "prettier 'src/**/*.ts' --write",
-    "precommit": "lint-staged"
+    "prettier": "prettier 'src/**/*.ts' --write"
   },
   "lint-staged": {
     "src/**/*.ts": [
