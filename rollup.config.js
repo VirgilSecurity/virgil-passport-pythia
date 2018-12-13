@@ -17,7 +17,7 @@ if (!formats[format]) {
 }
 
 module.exports = {
-  input: path.join(__dirname, "src", "index.ts"),
+  input: path.join(__dirname, 'src', 'index.ts'),
   external: Array.prototype.concat(
     Object.keys(packageJson.dependencies),
     Object.keys(packageJson.peerDependencies),
@@ -25,12 +25,12 @@ module.exports = {
   output: {
     format,
     file: `${NAME}.${format}.js`,
-    dir: path.join(__dirname, "dist")
+    dir: path.join(__dirname, 'dist'),
   },
   plugins: [
     typescript({
       exclude: '**/*.test.ts',
-      useTsconfigDeclarationDir: true
-    })
-  ]
+      useTsconfigDeclarationDir: true,
+    }),
+  ],
 };
