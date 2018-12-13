@@ -21,12 +21,6 @@
     "lint": "tslint --project tsconfig.json",
     "prettier": "prettier 'src/**/*.ts' --write"
   },
-  "lint-staged": {
-    "src/**/*.ts": [
-      "tslint --fix",
-      "git add"
-    ]
-  },
   "jest": {
     "moduleFileExtensions": [
       "ts",
