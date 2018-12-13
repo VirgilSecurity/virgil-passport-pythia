@@ -2,7 +2,7 @@
   "name": "passport-pythia-example",
   "version": "1.0.0",
   "description": "@virgilsecurity/passport-pythia example",
-  "repository": "https://github.com/VirgilSecurity/passport-pythia/tree/master/example",
+  "repository": "https://github.com/VirgilSecurity/virgil-passport-pythia/tree/master/example",
   "author": "Virgil Security Inc. <support@virgilsecurity.com>",
   "license": "BSD-3-Clause",
   "private": true,
