@@ -4,6 +4,11 @@ node_js:
   - "8"
   - "10"
   - "11"
+install:
+  - cd example
+  - yarn install
+  - cd ..
+  - yarn install
 script:
   - yarn lint
   - yarn test
