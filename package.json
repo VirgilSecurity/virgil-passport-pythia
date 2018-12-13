@@ -21,24 +21,6 @@
     "lint": "tslint --project tsconfig.json",
     "prettier": "prettier 'src/**/*.ts' --write"
   },
-  "jest": {
-    "moduleFileExtensions": [
-      "ts",
-      "js",
-      "json",
-      "node"
-    ],
-    "setupTestFrameworkScriptFile": "./jest.setup.js",
-    "testEnvironment": "node",
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "/dist/"
-    ],
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.ts$",
-    "transform": {
-      "^.+\\.ts$": "ts-jest"
-    }
-  },
   "dependencies": {
     "passport-strategy": "^1.0.0"
   },
