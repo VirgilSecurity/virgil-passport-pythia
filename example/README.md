@@ -11,7 +11,7 @@ This example demonstrates how to use [Express](http://expressjs.com/) and [Passp
 To run this example on your computer, clone this repository and install dependencies.
 
 ```sh
-git clone https://github.com/VirgilSecurity/passport-pythia.git
+git clone https://github.com/VirgilSecurity/virgil-passport-pythia.git
 cd passport-pythia
 npm install
 ```

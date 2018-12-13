@@ -1,4 +1,7 @@
 # @virgilsecurity/passport-pythia
+[![npm](https://img.shields.io/npm/v/@virgilsecurity/passport-pythia.svg)](https://www.npmjs.com/package/@virgilsecurity/passport-pythia)
+[![Build Status](https://travis-ci.com/VirgilSecurity/passport-pythia.svg?branch=master)](https://travis-ci.com/VirgilSecurity/passport-pythia)
+[![GitHub license](https://img.shields.io/badge/license-BSD%203--Clause-blue.svg)](https://github.com/VirgilSecurity/virgil-passport-pythia/blob/master/LICENSE)
 
 [Passport](http://www.passportjs.org/) strategy for authenticating with the Virgil [Pythia PRF](https://eprint.iacr.org/2015/644.pdf) service.
 
@@ -76,7 +79,7 @@ Developers using the [Express](http://expressjs.com/) web framework can refer to
 To run this example on your computer, clone this repository and install dependencies.
 
 ```sh
-git clone https://github.com/VirgilSecurity/passport-pythia.git
+git clone https://github.com/VirgilSecurity/virgil-passport-pythia.git
 cd passport-pythia
 npm install
 ```
@@ -97,4 +100,4 @@ npm test
 
 ## License
 
-[The 3-Clause BSD License](https://opensource.org/licenses/BSD-3-Clause)
+This library is released under the [BSD 3-Clause License](LICENSE).

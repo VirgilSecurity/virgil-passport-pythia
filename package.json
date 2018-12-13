@@ -1,6 +1,6 @@
 {
   "name": "@virgilsecurity/passport-pythia",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Passport strategy for authenticating with Virgil Pythia",
   "main": "./dist/passport-pythia.cjs.js",
   "module": "./dist/passport-pythia.es.js",
@@ -8,7 +8,7 @@
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/VirgilSecurity/passport-pythia",
+  "repository": "https://github.com/VirgilSecurity/virgil-passport-pythia",
   "author": "Virgil Security Inc. <support@virgilsecurity.com>",
   "license": "BSD-3-Clause",
   "scripts": {
@@ -18,32 +18,9 @@
     "build:es": "cross-env FORMAT=es rollup -c",
     "build": "npm run build:cjs && npm run build:es",
     "prepare": "npm run clean && npm run build",
-    "lint": "tslint --project tsconfig.json",
-    "prettier": "prettier 'src/**/*.ts' --write"
-  },
-  "lint-staged": {
-    "src/**/*.ts": [
-      "tslint --fix",
-      "git add"
-    ]
-  },
-  "jest": {
-    "moduleFileExtensions": [
-      "ts",
-      "js",
-      "json",
-      "node"
-    ],
-    "setupTestFrameworkScriptFile": "./jest.setup.js",
-    "testEnvironment": "node",
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "/dist/"
-    ],
-    "testRegex": "(/__tests__/.*|(\\.|/)(test|spec))\\.ts$",
-    "transform": {
-      "^.+\\.ts$": "ts-jest"
-    }
+    "eslint": "eslint '**/*.js'",
+    "tslint": "tslint --project tsconfig.json",
+    "lint": "npm run eslint && npm run tslint"
   },
   "dependencies": {
     "passport-strategy": "^1.0.0"
@@ -58,6 +35,11 @@
     "@types/passport-strategy": "^0.2.35",
     "cross-env": "^5.2.0",
     "dotenv": "^6.1.0",
+    "eslint": "^5.3.0",
+    "eslint-config-airbnb-base": "13.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-prettier": "^3.0.0",
     "husky": "^1.2.0",
     "jest": "^23.6.0",
     "lint-staged": "^8.1.0",

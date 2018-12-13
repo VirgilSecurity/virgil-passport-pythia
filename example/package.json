@@ -2,14 +2,12 @@
   "name": "passport-pythia-example",
   "version": "1.0.0",
   "description": "@virgilsecurity/passport-pythia example",
-  "repository": "https://github.com/VirgilSecurity/passport-pythia/tree/master/example",
+  "repository": "https://github.com/VirgilSecurity/virgil-passport-pythia/tree/master/example",
   "author": "Virgil Security Inc. <support@virgilsecurity.com>",
   "license": "BSD-3-Clause",
   "private": true,
   "scripts": {
-    "start": "node src/index.js",
-    "lint": "eslint 'src/**/*.js'",
-    "prettier": "prettier 'src/**/*.js' --write"
+    "start": "node src/index.js"
   },
   "dependencies": {
     "body-parser": "^1.18.3",
@@ -21,13 +19,5 @@
     "virgil-crypto": "^3.2.0",
     "virgil-pythia": "^0.2.3",
     "virgil-sdk": "^5.1.1"
-  },
-  "devDependencies": {
-    "eslint": "^5.9.0",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-config-prettier": "^3.3.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-prettier": "^3.0.0",
-    "prettier": "1.15.2"
   }
 }
