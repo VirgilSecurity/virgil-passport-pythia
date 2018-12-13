@@ -16,12 +16,12 @@ if (!formats[format]) {
   throw new TypeError(`'${format}' is not a valid module format.`);
 }
 
+const dependencies = Object.keys(packageJson.dependencies);
+const peerDependencies = Object.keys(packageJson.peerDependencies);
+
 module.exports = {
   input: path.join(__dirname, 'src', 'index.ts'),
-  external: Array.prototype.concat(
-    Object.keys(packageJson.dependencies),
-    Object.keys(packageJson.peerDependencies),
-  ),
+  external: Array.prototype.concat(dependencies, peerDependencies),
   output: {
     format,
     file: `${NAME}.${format}.js`,
