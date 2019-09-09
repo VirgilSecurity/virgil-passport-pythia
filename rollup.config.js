@@ -1,31 +1,23 @@
 const path = require('path');
+
 const typescript = require('rollup-plugin-typescript2');
 
 const packageJson = require('./package.json');
 
-const NAME = 'passport-pythia';
-
-const format = process.env.FORMAT;
-
-const formats = {
-  cjs: 'cjs',
-  es: 'es',
+const FORMAT = {
+  CJS: 'cjs',
+  ES: 'es',
 };
 
-if (!formats[format]) {
-  throw new TypeError(`'${format}' is not a valid module format.`);
-}
-
 const dependencies = Object.keys(packageJson.dependencies);
-const peerDependencies = Object.keys(packageJson.peerDependencies);
+const peerDependencies = Object.keys(packageJson.peerDependency);
 
-module.exports = {
+const createEntry = format => ({
+  external: dependencies.concat(peerDependencies),
   input: path.join(__dirname, 'src', 'index.ts'),
-  external: Array.prototype.concat(dependencies, peerDependencies),
   output: {
     format,
-    file: `${NAME}.${format}.js`,
-    dir: path.join(__dirname, 'dist'),
+    file: path.join(__dirname, 'dist', `passport-pythia.${format}.js`),
   },
   plugins: [
     typescript({
@@ -33,4 +25,6 @@ module.exports = {
       useTsconfigDeclarationDir: true,
     }),
   ],
-};
+});
+
+module.exports = Object.values(FORMAT).map(createEntry);

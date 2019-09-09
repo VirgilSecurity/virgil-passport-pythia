@@ -1,19 +1,10 @@
 {
   "compilerOptions": {
-    "target": "es5",
-    "lib": [
-      "ES2015",
-      "ES2016",
-      "ES2017",
-      "ES2018"
-    ],
+    "target": "ES2015",
     "declaration": true,
     "declarationDir": "./dist/types",
     "strict": true,
-    "moduleResolution": "node",
-    "experimentalDecorators": true
-  },
-  "include": [
-    "src"
-  ]
+    "esModuleInterop": true,
+    "moduleResolution": "node"
+  }
 }

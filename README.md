@@ -24,10 +24,16 @@ integrated into any application or framework that supports
 npm install @virgilsecurity/passport-pythia
 ```
 
-This module depends on `virgil-pythia` (which itself depends on `virgil-crypto`) module to be installed to be able to communicate with the Virgil Pythia PRF service and perform the cryptographic operations necessary to verify the passwords. Make sure you have both `virgil-pythia` and `virgil-crypto` installed.
+This module depends on `virgil-pythia` module to be installed to be able to communicate with the Virgil Pythia PRF service and perform the cryptographic operations necessary to verify the passwords.
 
 ```sh
-npm install virgil-crypto virgil-pythia
+npm install virgil-pythia
+```
+
+You also need to install `@virgilsecurity/pythia-crypto` and `virgil-crypto`, unless plan to use custom crypto implementations.
+
+```sh
+npm install @virgilsecurity/pythia-crypto virgil-crypto
 ```
 
 ## Usage
