@@ -1,3 +1,5 @@
+> This README is for @virgilsecurity/passport-pythia v0.2.x. Check the [v0.1.x branch](https://github.com/VirgilSecurity/virgil-passport-pythia/tree/v0.1.x) for an old version.
+
 # @virgilsecurity/passport-pythia
 [![npm](https://img.shields.io/npm/v/@virgilsecurity/passport-pythia.svg)](https://www.npmjs.com/package/@virgilsecurity/passport-pythia)
 [![Build Status](https://img.shields.io/travis/VirgilSecurity/virgil-passport-pythia.svg)](https://travis-ci.org/VirgilSecurity/virgil-passport-pythia)
