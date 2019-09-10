@@ -31,7 +31,7 @@ Create a new file named `.env` with the contents of `.env.example`
 cp .env.example .env
 ```
 
-Open the `.env` file in a text editor and replace the values starting with `[YOUR_VIRGIL_...` with the corresponding values from your Virgil Dashboard.
+Open the `.env` file in a text editor and replace the values starting with `[YOUR_...` with the corresponding values from your [Virgil Dashboard](https://dashboard.virgilsecurity.com).
 
 Start the server.
 
@@ -39,4 +39,4 @@ Start the server.
 npm start
 ```
 
-Open a web browser and navigate to http://localhost:3000/ to see the example in action. Sign up with any username and password to create a user record. And then Sign in with that username and password.
+Open a web browser and navigate to [http://localhost:3000](http://localhost:3000) to see the example in action. Sign up with any username and password to create a user record. And then Sign in with that username and password.

@@ -1,3 +1,5 @@
+> This README is for @virgilsecurity/passport-pythia v0.2.x. Check the [v0.1.x branch](https://github.com/VirgilSecurity/virgil-passport-pythia/tree/v0.1.x) for an old version.
+
 # @virgilsecurity/passport-pythia
 [![npm](https://img.shields.io/npm/v/@virgilsecurity/passport-pythia.svg)](https://www.npmjs.com/package/@virgilsecurity/passport-pythia)
 [![Build Status](https://img.shields.io/travis/VirgilSecurity/virgil-passport-pythia.svg)](https://travis-ci.org/VirgilSecurity/virgil-passport-pythia)
@@ -21,13 +23,19 @@ integrated into any application or framework that supports
 ## Install
 
 ```sh
-npm install @virgilsecurity/passport-pythia
+npm install @virgilsecurity/passport-pythia@next
 ```
 
-This module depends on `virgil-pythia` (which itself depends on `virgil-crypto`) module to be installed to be able to communicate with the Virgil Pythia PRF service and perform the cryptographic operations necessary to verify the passwords. Make sure you have both `virgil-pythia` and `virgil-crypto` installed.
+This module depends on `virgil-pythia@next` module to be installed to be able to communicate with the Virgil Pythia PRF service and perform the cryptographic operations necessary to verify the passwords.
 
 ```sh
-npm install virgil-crypto virgil-pythia
+npm install virgil-pythia@next
+```
+
+You also need to install `@virgilsecurity/pythia-crypto` and `virgil-crypto@next`, unless plan to use custom crypto implementations.
+
+```sh
+npm install @virgilsecurity/pythia-crypto virgil-crypto@next
 ```
 
 ## Usage

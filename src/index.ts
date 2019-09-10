@@ -1,1 +1,5 @@
-export { default } from './PythiaStrategy';
+export {
+  PythiaStrategy as default,
+  AuthenticationParams,
+  GetAuthenticationParamsFunction,
+} from './PythiaStrategy';

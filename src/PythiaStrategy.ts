@@ -1,16 +1,19 @@
-import { Request } from 'express';
+import isBuffer from 'is-buffer';
 import { Strategy } from 'passport-strategy';
 import { BreachProofPassword, Pythia } from 'virgil-pythia';
 
+import { NodeBuffer, Request } from './types';
+
 export interface AuthenticationParams {
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   user: any;
-  salt: Buffer | string;
-  deblindedPassword: Buffer | string;
+  salt: NodeBuffer | string;
+  deblindedPassword: NodeBuffer | string;
   version: number;
   password: string;
 }
 
-type GetAuthenticationParamsFunction = (
+export type GetAuthenticationParamsFunction = (
   request: Request,
   getAuthenticationParams: (
     error?: Error | null,
@@ -18,7 +21,7 @@ type GetAuthenticationParamsFunction = (
   ) => void,
 ) => void;
 
-export default class PythiaStrategy extends Strategy {
+export class PythiaStrategy extends Strategy {
   public name = 'pythia';
 
   private pythia: Pythia;
@@ -38,12 +41,13 @@ export default class PythiaStrategy extends Strategy {
       if (!PythiaStrategy.isAuthenticationParamsValid(authenticationParams)) {
         return this.fail('Invalid authentication parameters.', 400);
       }
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
       const { user, salt, deblindedPassword, version, password } = authenticationParams!;
       const myOptions = options || {};
       const { includeProof } = myOptions;
       const breachProofPassword = new BreachProofPassword(salt, deblindedPassword, version);
       this.pythia
-        .verifyBreachProofPassword(password, breachProofPassword, includeProof || false)
+        .verifyBreachProofPassword(password, breachProofPassword, includeProof)
         .then(verified => {
           if (verified) {
             return this.success(user);
@@ -56,10 +60,12 @@ export default class PythiaStrategy extends Strategy {
     });
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   private static isBufferOrString(value: any): boolean {
-    return typeof value === 'string' || Buffer.isBuffer(value);
+    return typeof value === 'string' || isBuffer(value);
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   private static isAuthenticationParamsValid(authenticationParams: any): boolean {
     if (
       authenticationParams &&
