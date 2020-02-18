@@ -1,4 +1,4 @@
-> This README is for @virgilsecurity/passport-pythia v0.2.x. Check the [v0.1.x branch](https://github.com/VirgilSecurity/virgil-passport-pythia/tree/v0.1.x) for an old version.
+> This README is for @virgilsecurity/passport-pythia v1.0.0. Check the [v0.1.x branch](https://github.com/VirgilSecurity/virgil-passport-pythia/tree/v0.1.x) for an old version.
 
 # @virgilsecurity/passport-pythia
 [![npm](https://img.shields.io/npm/v/@virgilsecurity/passport-pythia.svg)](https://www.npmjs.com/package/@virgilsecurity/passport-pythia)
@@ -32,10 +32,10 @@ This module depends on `virgil-pythia` module to be installed to be able to comm
 npm install virgil-pythia
 ```
 
-You also need to install `@virgilsecurity/pythia-crypto` and `virgil-crypto@next`, unless plan to use custom crypto implementations.
+You also need to install `@virgilsecurity/pythia-crypto` and `virgil-crypto`, unless plan to use custom crypto implementations.
 
 ```sh
-npm install @virgilsecurity/pythia-crypto virgil-crypto@next
+npm install @virgilsecurity/pythia-crypto virgil-crypto
 ```
 
 ## Usage

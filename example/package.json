@@ -16,8 +16,8 @@
     "express": "^4.17.1",
     "express-session": "^1.16.2",
     "passport": "^0.4.0",
-    "virgil-crypto": "next",
-    "virgil-pythia": "next",
-    "virgil-sdk": "next"
+    "virgil-crypto": "^4.0.0",
+    "virgil-pythia": "^1.0.0",
+    "virgil-sdk": "^6.0.0"
   }
 }
